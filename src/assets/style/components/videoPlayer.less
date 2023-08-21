@@ -1,14 +1,58 @@
 .wropper{
+  position: relative;
 
-  .scroll-bar{
-    margin-bottom: 30px;
-    width: 100%;
-    height: 20px;
-    border: 1px solid #999;
+  .control-panel{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50%) scaleY(0.5);
+    
+    &.active {
+      visibility: visible;
+      opacity: 0.5;
+      transform: none;
+      transition-duration: 0.4s;
+      transition-timing-function: steps(6, jump-start);
+    }
+    &:hover{
+      opacity: 0.7;
+    }
+
+    .scroll-bar{
+      margin-bottom: 10px;
+      width: 100%;
+      height: 10px;
+      border-bottom: 1px solid #757575;
+    }
+    .seek{
+      height: 100%;
+      background-color: #924848;
+    }
   }
-  .seek{
-    height: 100%;
-    width: 50%;
-    background-color: #999;
+  .alert-play{
+    position: absolute;
+    z-index: 99;
+    transform: translate(-50%, -50%) scaleZ(10%) ;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    visibility: hidden;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+     &.active{
+      opacity: 0.7;
+      visibility: visible;
+      transform: translate(-50%, -50%) scale(200%);
+      transition-duration: 0.4s;
+      transition-timing-function: steps(6, jump-start);
+     }
   }
 }
