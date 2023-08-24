@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <VideoPlayer></VideoPlayer>
+    <VideoPlayer :width="'720'"></VideoPlayer>
   </div>
 </template>
 

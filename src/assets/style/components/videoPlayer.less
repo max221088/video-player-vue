@@ -20,16 +20,112 @@
     &:hover{
       opacity: 0.7;
     }
+		.scroll-bar{
+			margin-bottom: 10px;
+			width: 100%;
+			height: 10px;
+			border-bottom: 1px solid #757575;
 
-    .scroll-bar{
-      margin-bottom: 10px;
-      width: 100%;
-      height: 10px;
-      border-bottom: 1px solid #757575;
-    }
-    .seek{
-      height: 100%;
-      background-color: #924848;
+			.seek{
+				height: 100%;
+				background-color: #924848;
+			}
+		}
+    .control-panel-button{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 5px;
+			padding-left: 5px;
+			padding-right: 5px;
+
+			.buttons{
+				display: flex;
+				align-items: center;
+
+				.btn{
+					background-color: #ffffff;
+					cursor: pointer;
+				}
+				.play{
+					width: 35px;
+					height: 35px;
+					border-radius: 100%;
+					margin-right: 20px;
+				}
+				.loop{
+					width: 25px;
+					height: 25px;
+					opacity: 0.8;
+					border-radius: 50%;
+					margin-right: 10px;
+	
+					&.active{
+						background-color: #f2a4a4;
+						opacity: 1;
+					}
+				}
+				.mute{
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+					opacity: 0.8;
+	
+					&.active{
+						background-color: #f2a4a4;
+						opacity: 1;
+					}
+				}
+	
+				.volume-panel{
+					margin-left: 10px;
+					color:#eee;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					.volume{
+						margin-bottom: 15px;
+						width: 150px;
+						margin-top: 5px;
+						appearance: none;
+						height: 5px;
+						background-color: #b8b8b8;
+						border-radius: 3px;
+		
+					}
+				}
+			}
+      .time-bar{
+        display: flex;
+        align-items: center;
+
+        .speed-panel{
+          margin-right: 30px;
+          .speed-title{
+            color: #eee;
+          }
+          .speed-select{
+            color: #eee ;
+            background-color: black;
+            border-radius: 5px;
+  
+          }
+        }
+        .control-panel-time{
+          color:#eee;
+  
+        }
+				.fullscreen{
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+					opacity: 0.8;
+					border-radius: 2px;
+					margin-left: 10px;
+				}
+      }
     }
   }
   .alert-play{
@@ -55,4 +151,12 @@
       transition-timing-function: steps(6, jump-start);
      }
   }
+}
+.full{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
 }
