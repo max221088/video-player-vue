@@ -1,5 +1,6 @@
 <template>
-  <div v-show="totalTime != 0" class="wropper" v-bind:class="{full: isFull}" :style="{width: widthInnit + 'px'}">
+  <div v-show="totalTime != 0" class="wropper" v-bind:class="{full: isFull}" 
+		:style="{width: widthInnit + 'px'}">
     <video 
       ref="player" :width="widthInnit" 
       @mousemove="onMoveMause()"
